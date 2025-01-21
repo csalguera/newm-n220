@@ -3,11 +3,11 @@
 ### Websites vs Web Applications
 
 - Webistes are informational interfaces.
-- Web applications are personalized interfaces.
+- Web applications are personalized interfaces that cater to the user.
 
 ### VS Code & Extensions
 
-- VS Code is an IDE from Microsoft.
+- VS Code is an integrated development environment (IDE) developed by Microsoft.
 - VS Code has various extensions to help developers be more efficient.
 
 ### Version Control, Git, & GitHub
