@@ -1,0 +1,1 @@
+console.warn("This page also does nothing.");
