@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>In-line Scripting</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>In-line Scripting</title>
+  </head>
+  <body>
+    <h1>In-Line Scripting</h1>
+    <button
+      onclick="sayHello()"
+    >
+      Click Me
+    </button>
+    <p
+      id="msg"
+      class="hidden"
+    >
+      Open your DevTools to read the string "Hello World!"
+    </p>
+    <script>
+      function sayHello() {
+        msg = document.getElementById("msg");
+        console.log("Hello World!");
+        msg.classList.remove("hidden");
+      }
+    </script>
+  </body>
 </html>
