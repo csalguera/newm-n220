@@ -7,23 +7,50 @@
     <title>In-line Scripting</title>
   </head>
   <body>
-    <h1>In-Line Scripting</h1>
-    <button
-      onclick="sayHello()"
+    <div
+      id="container"
     >
-      Click Me
-    </button>
-    <p
-      id="msg"
+      <h1>In-Line Scripting</h1>
+      <button
+        onclick="sayHello()"
+      >
+        Click Me
+      </button>
+      <button
+        onclick="hideElements()"
+      >
+        Not Me
+      </button>
+      <p
+        id="msg"
+        class="hidden"
+      >
+        Open your DevTools to read the string "Hello World!"
+      </p>
+    </div>
+    <div
+      id="container-2"
       class="hidden"
     >
-      Open your DevTools to read the string "Hello World!"
-    </p>
+      <p>Oops! Open your DevTools to find out what went wrong.</p>
+      <a
+        href="./index.html"
+      >
+        Refresh
+      </a>
+    </div>
     <script>
       function sayHello() {
         msg = document.getElementById("msg");
         console.log("Hello World!");
         msg.classList.remove("hidden");
+      }
+      function hideElements() {
+        console.warn("It looks like that button hides the various elements in the page.")
+        container = document.getElementById('container')
+        container.classList.add('hidden')
+        containerTwo = document.getElementById('container-2')
+        containerTwo.classList.remove('hidden')
       }
     </script>
   </body>

@@ -26,4 +26,5 @@ function disableBtn() {
   btn.disabled = true;
   // textContent is updated
   btn.innerText = "Out of stock";
+  console.error("No more cupcakes.")
 }
