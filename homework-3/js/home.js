@@ -13,8 +13,8 @@ let radius = 5;
  * the formulas of a circle will never change
 */
 const pi = Math.PI;
-const area = calc_area_circle(pi, radius)
-const perimeter = calc_perim_circle(pi, radius)
+export const area = calc_area_circle(pi, radius)
+export const perimeter = calc_perim_circle(pi, radius)
 const location = window.location.href
 
 // functions
