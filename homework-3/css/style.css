@@ -1,0 +1,46 @@
+body {
+  background-color: lightgray;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.active-link {
+  font-weight: bold;
+  color: black;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  text-align: center;
+  width: 600px;
+}
+
+#home-msgs {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+#home-msgs > p {
+  width: auto;
+}
