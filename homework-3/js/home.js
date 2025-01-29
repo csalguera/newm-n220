@@ -1,3 +1,10 @@
+// variables
+/*
+ * radius is declared as let (reassignable)
+ * the radius of a circle varies from circle to circle
+ */
+let radius = 5;
+
 // constants
 /*
  * pi, area, and perimeter are declared as constants
@@ -9,13 +16,6 @@ const pi = Math.PI;
 const area = calc_area_circle(pi, radius)
 const perimeter = calc_perim_circle(pi, radius)
 const location = window.location.href
-
-// variables
-/*
- * radius is declared as let (reassignable)
- * the radius of a circle varies from circle to circle
- */
-let radius = 5;
 
 // functions
 /*
