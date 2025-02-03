@@ -1,5 +1,5 @@
 // modules
-import { storeLocation, loginLocation } from "./utility.js";
+import { storeLocation, loginLocation, roundToTwoDecimals } from "./utility.js";
 
 // variables
 /*
@@ -45,6 +45,8 @@ function calc_perim_circle(x, y) {
  * This conditional prevents the console logs from printing in the store.html and login.html
  */
 if (!storeLocation && !loginLocation) {
-  console.log(`The perimeter of the specified circle is: ${perimeter}`);
-  console.log(`The area of the specified circle is: ${area}`);
+  console.log('The perimeter of the specified circle is:', perimeter);
+  console.log('Rounded to two decimal places, it is:', roundToTwoDecimals(perimeter));
+  console.log('The area of the specified circle is:', area);
+  console.log('Rounded to two decimal places, it is:', roundToTwoDecimals(area));
 }
