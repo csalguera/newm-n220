@@ -1,5 +1,5 @@
 // modules
-import { location } from './utility.js'
+import { homeLocation, loginLocation, roundToTwoDecimals } from './utility.js'
 
 // variables
 /*
@@ -21,56 +21,38 @@ function applyTax(num) {
   return roundToTwoDecimals(num * (1 + salesTax))
 }
 
-// function accepts an argument to round to the nearest hundredth (to the nearest cent in terms of dollars)
-function roundToTwoDecimals(num) {
-  // the argument/num is formatted into a string to two decimal places
-  num = num.toFixed(3)
-  // variable idx is assigned the value of the index of where '.' (the decimal) is found within the string
-  const idx = num.indexOf('.')
-  // variable decimalToRound is assigned the value of all the numbers (as a string) after the decimal point through the slice method and idx variable
-  let decimalToRound = num.slice(idx + 1)
-  // new array is defined, initially empty
-  const decimalArr = []
-  // for loop iterates per character in decimalToRound string
-  for (let i = 0; i < decimalToRound.length; i++) {
-    // each character is pushed to the decimalArr as an integer data type
-    decimalArr.push((parseInt(decimalToRound[i])))
-  }
-  // if block will essentially round the numbers through bracket notation
-  if (decimalArr[2] >= 5) {
-    decimalArr[1] += 1
-    // if the given number is equal to 10, it will be set to 0 and the number preceding it will be rounded up
-    if (decimalArr[1] === 10) {
-      decimalArr[0] += 1
-      decimalArr[1] = 0
-    }
-  }
-  decimalArr[2] = 0
-  // the decimalArr is joined as a string with no spaces along with the decimal point ('.'), it is then parsed into a float
-  let roundedFloat = parseFloat(`.${decimalArr.join('')}`)
-  // num is parsed as an int which truncates the decimal portion
-  num = parseInt(num)
-  // finally the sum of num and roundedFloat is returned
-  return num + roundedFloat
-}
-
+// functions determines the eligibility of the item for discount
 function determineDiscountEligibility(num) {
+  // variable is assigned the value of boolean data type whether num is greater than 50
   let eligible = num > 50
+  // msg variable is declaed but not defined
   let msg
+  // if eligible variable is true, then if block will execute
   if (eligible) {
+    // msg is assigned a value
     msg = `This item is eligible for a discount.`
+  // otherwise if variable is false, then the else block will execute
   } else {
+    // msg is assigned a value
     msg = `This item is not eligible for a discount.`
   }
+  // msg is returned
   return msg
 }
 
+// function returns the total price of an item after discount
 function applyDiscount(num) {
+  // the discount variable is defined as 10% or 0.1
   let discount = 0.1
+  // the difference between the original total (num) and the total with discount is returned
   return roundToTwoDecimals(num - (num * discount))
 }
 
-if (!location.includes("/index.html") && !location.includes("/login.html")) {
+// conditionals
+/*
+ * This conditional prevents the console logs from printing in the index.html and login.html
+ */
+if (!homeLocation && !loginLocation) {
   console.log('The total price of this item after tax is:', totalAfterTax);
   console.log(eligibleForDiscount);
   console.log('The discounted total would have been:', discountedTotalAfterTax);
