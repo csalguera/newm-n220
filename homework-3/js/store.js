@@ -7,10 +7,10 @@ import { homeLocation, loginLocation, roundToTwoDecimals } from './utility.js'
  * totalAfterTax and discountedTotalAfterTax variables are const because their value is assigned from function calls that return values
  * the variables within those functions (ie salesTax) are declared as let because the sales tax can vary from state to state
  */
-const itemPrice = 40.99
-const totalAfterTax = applyTax(itemPrice)
-const eligibleForDiscount = determineDiscountEligibility(totalAfterTax)
-const discountedTotalAfterTax = applyDiscount(totalAfterTax)
+export const itemPrice = 40.99
+export const totalAfterTax = applyTax(itemPrice)
+export const eligibleForDiscount = determineDiscountEligibility(totalAfterTax)
+export const discountedTotalAfterTax = applyDiscount(totalAfterTax)
 
 // function accepts a num as an argument to return a total of the num along with the applicable sales tax
 function applyTax(num) {
