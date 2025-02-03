@@ -1,7 +1,10 @@
+// modules
+import { location } from "./utility.js";
+
 // variables
 /*
  * radius is declared as let (reassignable)
- * the radius of a circle varies from circle to circle
+ * the reason is because the radius varies from circle to circle
  */
 let radius = 5;
 
@@ -15,7 +18,6 @@ let radius = 5;
 const pi = Math.PI;
 export const area = calc_area_circle(pi, radius)
 export const perimeter = calc_perim_circle(pi, radius)
-const location = window.location.href
 
 // functions
 /*
@@ -39,7 +41,10 @@ function calc_perim_circle(x, y) {
 }
 
 // conditionals
-if (!location.includes("/store.html") || !location.includes("/login.html")) {
+/*
+ * This conditional prevents the console logs from printing in the store.html and login.html
+ */
+if (!location.includes("/store.html") && !location.includes("/login.html")) {
   console.log(`The perimeter of the specified circle is: ${perimeter}`);
   console.log(`The area of the specified circle is: ${area}`);
 }
