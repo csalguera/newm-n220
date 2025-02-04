@@ -7,6 +7,7 @@ import { homeLocation, storeLocation, loginLocation, roundToTwoDecimals } from '
 // cached element references
 const homeMsgs = document.getElementById('home-msgs')
 const storeMsgs = document.getElementById('store-msgs')
+const loginMsgs = document.getElementById('login-msgs')
 
 // DOM manipulation
 if (!storeLocation && !loginLocation) {
@@ -32,4 +33,18 @@ if (!homeLocation && !loginLocation) {
   storeMsgs.appendChild(totalMsg)
   storeMsgs.appendChild(eligibilityMsg)
   storeMsgs.appendChild(discountMsg)
+}
+
+if (!homeLocation && !storeLocation) {
+  const spaceMsg = document.createElement('p')
+  const characterMsg = document.createElement('p')
+  const eatMsg = document.createElement('p')
+
+  spaceMsg.textContent = `The password does not include a space in the beginning.`
+  characterMsg.textContent = `The password has a minimum of 8 characters.`
+  eatMsg.textContent = `The password contains the word "eat".`
+
+  loginMsgs.appendChild(spaceMsg)
+  loginMsgs.appendChild(characterMsg)
+  loginMsgs.appendChild(eatMsg)
 }
