@@ -1,6 +1,7 @@
 // modules
 import * as home from './home.js'
 import * as store from './store.js'
+import * as login from './login.js'
 import { homeLocation, storeLocation, loginLocation, roundToTwoDecimals } from './utility.js'
 
 // cached element references
