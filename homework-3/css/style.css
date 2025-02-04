@@ -35,12 +35,14 @@ p {
   width: 600px;
 }
 
-#home-msgs {
+#home-msgs,
+#store-msgs {
   display: flex;
   flex-direction: column;
   align-content: center;
 }
 
-#home-msgs > p {
+#home-msgs > p,
+#store-msgs > p {
   width: auto;
 }

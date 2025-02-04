@@ -21,8 +21,14 @@ if (!storeLocation && !loginLocation) {
 
 if (!homeLocation && !loginLocation) {
   const totalMsg = document.createElement('p')
+  const eligibilityMsg = document.createElement('p')
+  const discountMsg = document.createElement('p')
   
   totalMsg.textContent = `The total price of this item after tax is ${roundToTwoDecimals(store.totalAfterTax)}`
+  eligibilityMsg.textContent = `This item is ${store.eligibleForDiscount ? 'not' : ''} eligible for a discount.`
+  discountMsg.textContent = `The discounted total would have been ${roundToTwoDecimals(store.discountedTotalAfterTax)}`
   
   storeMsgs.appendChild(totalMsg)
+  storeMsgs.appendChild(eligibilityMsg)
+  storeMsgs.appendChild(discountMsg)
 }
