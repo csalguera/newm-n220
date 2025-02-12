@@ -48,3 +48,18 @@ const googleLinkRef = document.querySelector('a.google')
 
 googleLinkRef.href = 'https://google.com'
 googleLinkRef.target = '_blank'
+
+const inputRef = document.querySelector('input')
+inputRef.setAttribute('placeholder', 'Green Jello with the Fruit')
+
+pRef.dataset.age = '89'
+console.log(pRef);
+console.log(pRef.dataset);
+
+pRef.classList.add('blue')
+pRef.classList.remove('blue')
+
+const newLi = document.createElement('li')
+newLi.textContent = 'G'
+newLi.classList.add('letter-grade')
+ulRef.appendChild(newLi)
