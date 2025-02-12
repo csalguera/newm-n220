@@ -38,7 +38,7 @@ pRef.style.width = '400px'
 document.querySelector('li').style.display = 'none'
 
 h1Ref.style.display = 'none'
-h1Ref.style.display = 'inline'
+h1Ref.style.display = 'block'
 
 const ulLiRefs = ulRef.querySelectorAll('li')
 
