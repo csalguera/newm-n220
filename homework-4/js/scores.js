@@ -1,4 +1,4 @@
-// import findAverage function from utilities.js file
+// modules
 import { findAverage, appendElements } from "./utilities.js"
 
 // initialize list of scores as an array
