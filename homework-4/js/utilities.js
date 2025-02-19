@@ -6,10 +6,10 @@ export const findAverage = (arr) => {
   return sum / arr.length
 }
 
-export const appendElements = (arr, el, ref) => {
+export const appendElements = (arr, tagName, ref) => {
   for (let i = 0; i < arr.length; i++) {
-    const element = document.createElement(el)
-    if (el === 'img') {
+    const element = document.createElement(tagName)
+    if (tagName === 'img') {
       element.src = arr[i].url
       element.alt = `Image ${i}`
       element.height = '300'
