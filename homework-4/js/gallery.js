@@ -1,3 +1,5 @@
+import { appendElements } from "./utilities.js"
+
 const img1 = {
   url: 'https://fastly.picsum.photos/id/804/300/400.jpg?hmac=Y6cx9oentnw75-Q7gYdlaJBBAnSAlUHRYXbvFMIrZNI'
 }
@@ -22,3 +24,5 @@ const photos = [
 ]
 
 const galleryRef = document.querySelector('#gallery')
+
+appendElements(photos, 'img', galleryRef)
