@@ -15,8 +15,12 @@ const changeH1Color = (evt) => {
 }
 
 const chageH1Size = (evt) => {
-  console.log(evt.target.value);
-  h1Ref.style.fontSize = `${evt.target.value}px`
+  const fontSzie = Number(evt.target.value)
+  if (fontSzie >= 8) {
+    h1Ref.style.fontSize = `${evt.target.value}px`
+  } else {
+    evt.target.value = 8
+  }
 }
 
 h1Ref.addEventListener('click', changeH1Style)
