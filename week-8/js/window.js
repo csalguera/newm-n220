@@ -7,5 +7,7 @@ const getFavoritePeepFlavor = () => {
   console.log("Favorite flavor:", flavor);
 }
 
-const chooseToLeave = confirm("Are you going to go get the flyers?")
-console.log('Ty is getting the flyers:', chooseToLeave);
+const isTyGettingFlyers = () => {
+  const chooseToLeave = confirm("Are you going to go get the flyers?")
+  console.log('Ty is getting the flyers:', chooseToLeave);
+}
