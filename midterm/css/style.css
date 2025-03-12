@@ -1,0 +1,22 @@
+.menu-item-li {
+  display: flex;
+  max-width: 400px;
+}
+
+.menu-item-li > * {
+  margin: 2px 4px;
+  list-style: none;
+}
+
+.menu-item-li:hover {
+  background-color: rgb(166, 255, 166);
+}
+
+textarea {
+  width: 150px;
+  height: 20px;
+}
+
+table {
+  background-color: rgb(188, 234, 245);
+}
