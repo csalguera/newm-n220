@@ -9,6 +9,7 @@
 5. [Homework-3](./homework-3/)
 6. [Week-5](./week-5/)
 7. [Homework-4](./homework-4/)
-7. [Week-7](./week-7/)
+8. [Week-7](./week-7/)
+9. [Field Trip](./fieldtrip/)
 
 [Base Link](https://csalguera.github.io/newm-n220/)
